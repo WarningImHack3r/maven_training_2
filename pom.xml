@@ -13,11 +13,23 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
+		<reflections.version>0.10.2</reflections.version>
 	</properties>
 
 	<modules>
 		<module>lernejo-tester</module>
 	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.reflections</groupId>
+				<artifactId>reflections</artifactId>
+				<version>${reflections.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
@@ -31,14 +43,24 @@
 			<version>1.0.0</version>
 			<scope>compile</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>fr.lernejo</groupId>
 			<artifactId>lernejo-tester</artifactId>
 			<version>1.0.0</version>
 			<type>test-jar</type>
 		</dependency>
-
+		<dependency>
+			<groupId>org.jetbrains</groupId>
+			<artifactId>annotations</artifactId>
+			<version>22.0.0</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.32</version>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 
 	<profiles>
