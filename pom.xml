@@ -8,16 +8,46 @@
     <artifactId>lernejo-tester-reactor</artifactId>
 	<packaging>pom</packaging>
 	<version>1.0.0</version>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+	</properties>
+
 	<modules>
 		<module>lernejo-tester</module>
-		<module>sample</module>
 	</modules>
+	<dependencies>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>5.8.2</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>fr.lernejo</groupId>
+			<artifactId>lernejo-tester</artifactId>
+			<version>1.0.0</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>fr.lernejo</groupId>
+			<artifactId>lernejo-tester</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+		</dependency>
+
+	</dependencies>
 
 	<profiles>
 		<profile>
 			<id>with-tests</id>
+			<modules>
+				<module>sample</module>
+			</modules>
 		</profile>
 	</profiles>
-
 
 </project>
