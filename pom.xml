@@ -14,6 +14,9 @@
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 		<reflections.version>0.10.2</reflections.version>
+		<junit.version>5.8.2</junit.version>
+		<annotations.version>22.0.0</annotations.version>
+		<slf4j.version>1.7.32</slf4j.version>
 	</properties>
 
 	<modules>
@@ -34,31 +37,19 @@
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
-			<version>5.8.2</version>
+			<version>${junit.version}</version>
 			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>fr.lernejo</groupId>
-			<artifactId>lernejo-tester</artifactId>
-			<version>1.0.0</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>fr.lernejo</groupId>
-			<artifactId>lernejo-tester</artifactId>
-			<version>1.0.0</version>
-			<type>test-jar</type>
 		</dependency>
 		<dependency>
 			<groupId>org.jetbrains</groupId>
 			<artifactId>annotations</artifactId>
-			<version>22.0.0</version>
+			<version>${annotations.version}</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
-			<version>1.7.32</version>
+			<version>${slf4j.version}</version>
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>

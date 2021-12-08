@@ -14,14 +14,14 @@ public record TestClassDiscoverer(String packageName) {
 	public @NotNull List<TestClassDescription> testListClasses() {
 		ArrayList<TestClassDescription> list = new ArrayList<>();
 		System.out.println("here");
-		new Reflections(packageName).getSubTypesOf(Object.class)
+		new Reflections(packageName, Scanners.SubTypes).getSubTypesOf(Object.class)
+			.forEach(System.out::println)
 			/*.stream()
 			.filter(c -> !Arrays.stream(c.getDeclaredMethods())
 				.filter(method -> method.isAnnotationPresent(TestMethod.class))
 				.toList().isEmpty()
 				             && c.getName().endsWith("LernejoTests"))
-			.forEach(c -> list.add(new TestClassDescription(c)));*/
-			.forEach(System.out::println); // still finds nothing
+			.forEach(c -> list.add(new TestClassDescription(c)))*/;
 		return list;
 	}
 }
