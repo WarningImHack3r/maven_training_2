@@ -11,4 +11,14 @@
 
 	<artifactId>sample</artifactId>
 
+	<dependencies>
+		<dependency>
+			<groupId>fr.lernejo</groupId>
+			<artifactId>lernejo-tester</artifactId>
+			<version>${project.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
 </project>
